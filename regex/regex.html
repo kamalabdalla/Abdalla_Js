@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>regular expression</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        display: grid;
+        place-items: center;
+      }
+      form,
+      input {
+        margin: 10px;
+      }
+      button {
+        width: 70px;
+        height: 30px;
+        background-color: rgb(182, 227, 228);
+        color: blue;
+        border: none;
+        border-radius: 8px;
+      }
+      #pp {
+        color: red;
+        letter-spacing: 1px;
+        display: none;
+        font-size: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div>
+        <h1
+          style="
+            text-align: center;
+            font-size: larger;
+            color: brown;
+            font-style: italic;
+          "
+        >
+          REGEX
+        </h1>
+
+        <form id="fom" name="fom1" onsubmit="return check()">
+          <div>
+            <label for="name">Name</label>
+            <input type="text" id="name" required />
+            <p id="pp">name must be 2 or 23 cheracters</p>
+          </div>
+          <br />
+          <div>
+            <label for="address">Address</label>
+            <textarea style="height: 20px"></textarea>
+            <br />
+          </div>
+          <div>
+            <label for="zip">Zipcode</label>
+            <input type="text" name="zip" id="zip" required /><br />
+            <p id="pp">name must be 2 or 23 cheracters</p>
+          </div>
+          <div>
+            <label for="country">Country</label>
+            <select name="" id="" >
+              <option value="please select"></option>
+              <option value="1">Zanzibar</option>
+              <option value="2">Kinya</option>
+              <option value="3">Zaire</option>
+            </select>
+          </div>
+          <br />
+          <div>
+            <label for="gender">Gender</label>
+            <label for="male" style="margin-left: 16px">Male</label>
+            <input type="radio" name="ckek" id="male" />
+            <label for="female" style="margin-left: 16px">Female</label>
+            <input type="radio" name="ckek" id="female" />
+          </div>
+
+          <div>
+            <label for="pre">Prefarrences</label>
+            Red
+            <input
+              type="checkbox"
+              name="box"
+              id="chkbox1"
+              value="1"
+              onclick="check(1)"
+            />
+            Blue
+            <input
+              type="checkbox"
+              name="box"
+              id="chkbox4"
+              value="2"
+              onclick="check(2)"
+            />
+            Black
+            <input
+              type="checkbox"
+              name="box"
+              id="chkbox2"
+              value="3"
+              onclick="check(3)"
+            />
+          </div>
+          <div>
+            <label for="phon">Phone Numb</label>
+            <input type="text" name="phone" id="phone" required /><br />
+            <p id="pp">name must be 2 or 23 cheracters</p>
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email" required /><br />
+            <p id="pp">name must be 2 or 23 cheracters</p>
+          </div>
+          <div>
+            <label for="pssd">Password</label>
+            <input type="password" name="password" id="password" required />
+            <br />
+            <label for="vpssd">Verify Passord</label>
+            <input type="password" name="cpssd" id="cnfpssd" required />
+            <p id="ms"></p>
+          </div>
+          <button type="submit" value="submit">submit</button>
+          <button id="reset">Clear</button>
+        </form>
+      </div>
+    </section>
+    <script src="regex.js"></script>
+  </body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object And Dom</title>
+    <style>
+        .f{
+            display: flex;
+            display: block;
+            color: blueviolet;
+        }
+        .f span{
+            background-color: black;
+        }
+        .ppp1{
+        width: 200px;
+        height: 300px;
+        color: red;
+        background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <h2 style="display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: italic;
+    text-transform: uppercase;
+    font-weight: 500;">Abdalla Object And Dom</h2>
+    /rtyuiopo/
+    <p>dula</p>
+    <p>dula</p>
+    <p>dula</p>
+    <span class="k">kamal</span>
+    <div class="con">
+        <h2>dula</h2>
+    </div>
+    <div class="f">
+        <h3>rihan</h3>
+    </div>
+    <a href="www.google.com">gogle</a>
+<br>
+    <div id="ppp">
+    <!-- <div>YOUR CITY : <span id="city"></span></div>
+    <div>YOUR network : <span id="network"></span></div>
+    <div>YOUR version : <span id="version"></span></div>
+    <div>YOUR region : <span id="region"></span></div>
+    <div>YOUR region_code : <span id="region_code"></span></div>
+    <div>YOUR country : <span id="country"></span></div>
+    <div>YOUR country_name : <span id="country_name"></span></div>
+    <div>YOUR asn : <span id="asn"></span></div> -->
+    </div>
+    <button onclick="fetchDta()">bofya</button>
+    
+     
+<!-- <h2>werty</h2> -->
+
+     <script> 
+         const oo = document.getElementById('ppp')
+function fetchDta(){
+        fetch('https://ipapi.co/8.8.8.8/json')
+        .then(res => res.json())
+        .then(dat=>{
+            // const res = JSON.parse(data);
+            // console.log(JSON.stringify(data));
+            // console.log(data.city);
+            document.getElementById('ppp').innerHTML = (JSON.stringify(data));
+            // document.getElementById('dat').innerHTML = JSON.parse(data);
+            
+            document.getElementById('city').innerHTML = data.city;
+            document.getElementById('network').innerHTML = data.network;
+            document.getElementById('version').innerHTML = data.version;
+            document.getElementById('region').innerHTML = data.region;
+            document.getElementById('region_code').innerHTML = data.region_code;
+            document.getElementById('country').innerHTML = data.country;
+            document.getElementById('country_name').innerHTML = data.country_name;
+            document.getElementById('country_name').innerHTML = data.country_name;
+            document.getElementById('asn').innerHTML = data.asn;
+
+            //   oo.innerHTML += `<div class='ppp1'>${JSON.stringify(data)}</div>` 
+          
+         })
+        .catch(e=>{
+            console.log("ERROR OCCCURED : " + e)
+        });
+    }
+
+   
+    
+        </script> 
+    <!-- <script src="object.js"></script> -->
+</body>
+</html>

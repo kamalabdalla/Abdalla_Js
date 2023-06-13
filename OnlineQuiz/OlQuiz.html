@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Online Quiz System</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    
+    h1 {
+      text-align: center;
+    }
+    
+    .question {
+      margin-bottom: 10px;
+    }
+    
+    .options {
+      margin-bottom: 20px;
+    }
+    
+    .result {
+      text-align: center;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Online Quiz</h1>
+  <div class="question">
+    <h3>Question 1: What is the capital of France?</h3>
+    <div class="options">
+      <label><input type="radio" name="q1" value="a"> a) London</label><br>
+      <label><input type="radio" name="q1" value="b"> b) Paris</label><br>
+      <label><input type="radio" name="q1" value="c"> c) Rome</label><br>
+    </div>
+  </div>
+  
+  <div class="question">
+    <h3>Question 2: Who painted the Mona Lisa?</h3>
+    <div class="options">
+      <label><input type="radio" name="q2" value="a"> a) Leonardo da Vinci</label><br>
+      <label><input type="radio" name="q2" value="b"> b) Vincent van Gogh</label><br>
+      <label><input type="radio" name="q2" value="c"> c) Pablo Picasso</label><br>
+    </div>
+  </div>
+  
+  <div class="question">
+    <h3>Question 3: What is the chemical symbol for gold?</h3>
+    <div class="options">
+      <label><input type="radio" name="q3" value="a"> a) Go</label><br>
+      <label><input type="radio" name="q3" value="b"> b) Au</label><br>
+      <label><input type="radio" name="q3" value="c"> c) Ag</label><br>
+    </div>
+  </div>
+  
+  <button onclick="submitQuiz()">Submit Quiz</button>
+  
+  <div class="result" id="quizResult"></div>
+  
+  <script src="OlQuiz.js"></script>
+</body>
+</html>
